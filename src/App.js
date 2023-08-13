@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import axios from 'axios'
+import SupportTickets from './components/SupportTickets'
+import { useEffect, useState } from 'react'
+
+const API_URL = "http://localhost:3000/api/v1/support_tickets";
+
+function getAPIData(){
+  return axios.get(API_URL).then((response) => response.data)
+}
 
 function App() {
+  const [support_tickets, setSupportTickets] = useState([]);
+
+  useEffect(() => {
+    let mounted = true;
+    getAPIData().then((tickets) => {
+      if(mounted){
+        setSupportTickets(tickets)
+      }
+    });
+
+    return () => (mounted = false);
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SupportTickets tickets={support_tickets}></SupportTickets>
     </div>
   );
 }
