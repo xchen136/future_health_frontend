@@ -7,7 +7,8 @@ function SupportTicketForm() {
   const [description, setDescription] = useState('');
 
   function handleSubmit(event){
-    //TODO: form validation: make sure name and description is nonempty, and email is valid
+    //TODO#1 - form validation: make sure name and description is nonempty, and email is valid
+    //TODO#2 - error handling: display error message
 
     event.preventDefault();
 
