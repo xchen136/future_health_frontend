@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Box from '@mui/material/Box';
 import Collapse from '@mui/material/Collapse';
 import Table from '@mui/material/Table';
@@ -8,6 +8,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+
 import axios from 'axios'
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -89,10 +90,24 @@ function Row(props) {
 }
 
 
-function SupportTicketList(props) {
+function SupportTicketList() {
+  const [support_tickets, setSupportTickets] = useState([]);
+
+  useEffect(() => {
+    let mounted = true;
+    axios.get("http://localhost:3000/api/v1/support_tickets")
+      .then((response) => {
+        if(mounted){
+          setSupportTickets(response.data)
+        }
+      })
+
+    return () => (mounted = false);
+  }, []);
+
   return (
     <div className="w-4/5">
-      <TableContainer component={Paper} className="pt-6 px-5">
+      <TableContainer component={Paper} className="pt-8 px-5">
         <h1 className="font-bold text-xl mb-5 text-center">Support Tickets</h1>
         <Table aria-label="collapsible table">
           <TableHead>
@@ -107,7 +122,7 @@ function SupportTicketList(props) {
             </TableRow>
           </TableHead>
           <TableBody>
-            {props.tickets.map((row) => (
+            {support_tickets.map((row) => (
               <Row key={row.id} row={row} />
             ))}
           </TableBody>
