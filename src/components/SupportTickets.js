@@ -3,7 +3,7 @@ import React from 'react'
 function SupportTickets(props) {
   return (
     <div>
-      <h1>List of Support Tickets</h1>
+      <h1>Admin Settings</h1>
       {
         props.tickets.map((ticket) => {
           return (

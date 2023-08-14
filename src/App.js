@@ -1,6 +1,7 @@
 import './App.css';
 import axios from 'axios'
 import SupportTickets from './components/SupportTickets'
+import SupportTicketForm from './components/SupportTicketForm'
 import { useEffect, useState } from 'react'
 
 const API_URL = "http://localhost:3000/api/v1/support_tickets";
@@ -25,7 +26,8 @@ function App() {
 
   return (
     <div className="App">
-      <SupportTickets tickets={support_tickets}></SupportTickets>
+      {/* <SupportTickets tickets={support_tickets}></SupportTickets> */}
+      <SupportTicketForm/>
     </div>
   );
 }
