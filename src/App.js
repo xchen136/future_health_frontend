@@ -1,6 +1,6 @@
 import './App.css';
 import axios from 'axios'
-import SupportTickets from './components/SupportTickets'
+import SupportTicketList from './components/SupportTicketList'
 import SupportTicketForm from './components/SupportTicketForm'
 import { useEffect, useState } from 'react'
 
@@ -25,9 +25,9 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      {/* <SupportTickets tickets={support_tickets}></SupportTickets> */}
-      <SupportTicketForm/>
+    <div className="w-screen h-screen bg-[#F7F7F7] pt-24 flex justify-center">
+      <SupportTicketList tickets={support_tickets}></SupportTicketList>
+      {/* <SupportTicketForm/> */}
     </div>
   );
 }
