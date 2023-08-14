@@ -7,6 +7,8 @@ function SupportTicketForm() {
   const [description, setDescription] = useState('');
 
   function handleSubmit(event){
+    //TODO: form validation: make sure name and description is nonempty, and email is valid
+
     event.preventDefault();
 
     axios.post("http://localhost:3000/api/v1/support_tickets", {
@@ -17,6 +19,9 @@ function SupportTicketForm() {
       }
     }).then((response) => console.log(response.data))
 
+    setFullName("")
+    setEmail("")
+    setDescription("")
   }
 
   return (
