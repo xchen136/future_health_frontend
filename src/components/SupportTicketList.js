@@ -31,6 +31,23 @@ function SupportTicketList() {
     return () => (mounted = false);
   }, []);
 
+  function updateTicketStatus(ticketId, status){
+    axios.patch(`http://localhost:3000/api/v1/support_tickets/${ticketId}`, {
+      support_ticket: {
+        status: status,
+      }
+    }).then((response) => {
+      let updatedTickets = support_tickets.map((ticket) => {
+        if(ticket.id === ticketId){
+          return {...ticket, status: response.data.status}
+        }
+        return ticket
+      })
+
+      setSupportTickets(updatedTickets)
+    })
+  }
+
   return (
     <div className="w-4/5">
       <TableContainer component={Paper} className="pt-8 px-5">
@@ -50,7 +67,7 @@ function SupportTicketList() {
 
           <TableBody>
             {support_tickets.map((ticket) => (
-              <SupportTicketListItem key={ticket.id} ticket={ticket}/>
+              <SupportTicketListItem key={ticket.id} ticket={ticket} updateTicketStatus={updateTicketStatus}/>
             ))}
           </TableBody>
         </Table>

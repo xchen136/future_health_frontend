@@ -18,14 +18,6 @@ function SupportTicketListItem(props) {
     }).then((response) => console.log(response.data))
   }
 
-  function updateTicketStatus(ticketId, status){
-    axios.patch(`http://localhost:3000/api/v1/support_tickets/${ticketId}`, {
-      support_ticket: {
-        status: status,
-      }
-    }).then((response) => console.log(response.data))
-  }
-
   return (
   <React.Fragment key={ticket.id}>
     <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
@@ -38,7 +30,7 @@ function SupportTicketListItem(props) {
       <TableCell>{ticket.name}</TableCell>
       <TableCell>{ticket.email}</TableCell>
       <TableCell>
-        <select value={ticket.status} onChange={(e) => updateTicketStatus(ticket.id, e.target.value)} className="p-2">
+        <select value={ticket.status} onChange={(e) => props.updateTicketStatus(ticket.id, e.target.value)} className="p-2">
           <option value="New">New</option>
           <option value="In Progress">In Progress</option>
           <option value="Resolved">Resolved</option>
