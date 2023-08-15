@@ -23,7 +23,7 @@ function SupportTicketListItem(props) {
     <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
       <TableCell>
       </TableCell>
-      <TableCell>1</TableCell>
+      <TableCell>{ticket.number}</TableCell>
       <TableCell component="th" scope="row">
         {ticket.description}
       </TableCell>
