@@ -6,9 +6,10 @@ Frontend is written in React.js, while Backend ([repository](https://github.com/
 
 **Live Demo:** https://future-health-frontend-81267e8cf9e0.herokuapp.com
 
-<img width="722" alt="image" src="https://github.com/xchen136/future_health_frontend/assets/31082478/213f068f-ebea-4910-9bbc-5a335d68e18e">
+<img width="560" alt="image" src="https://github.com/xchen136/future_health_frontend/assets/31082478/735159e9-8229-46de-a0c0-3781b52ab4b2">
 
-<img width="2114" alt="image" src="https://github.com/xchen136/future_health_frontend/assets/31082478/f399609a-4e3f-4e09-ad7f-f38701ceb549">
+<img width="1202" alt="image" src="https://github.com/xchen136/future_health_frontend/assets/31082478/f743b613-06e2-4293-9692-ae2266ce760b">
+
 
 <br>
 
