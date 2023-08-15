@@ -21,7 +21,7 @@ function SupportTicketList() {
 
   useEffect(() => {
     let mounted = true;
-    axios.get("http://localhost:3000/api/v1/support_tickets")
+    axios.get("https://future-health-api-39e0c55da4b5.herokuapp.com/api/v1/support_tickets")
       .then((response) => {
         if(mounted){
           setSupportTickets(response.data)
@@ -32,7 +32,7 @@ function SupportTicketList() {
   }, []);
 
   function updateTicketStatus(ticketId, status){
-    axios.patch(`http://localhost:3000/api/v1/support_tickets/${ticketId}`, {
+    axios.patch(`https://future-health-api-39e0c55da4b5.herokuapp.com/api/v1/support_tickets/${ticketId}`, {
       support_ticket: {
         status: status,
       }

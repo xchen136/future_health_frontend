@@ -12,7 +12,7 @@ function SupportTicketForm() {
 
     event.preventDefault();
 
-    axios.post("http://localhost:3000/api/v1/support_tickets", {
+    axios.post("https://future-health-api-39e0c55da4b5.herokuapp.com/api/v1/support_tickets", {
       support_ticket: {
         name: fullName,
         email: email,

@@ -13,7 +13,7 @@ function SupportTicketListItem(props) {
   function submitResponse(ticketId, event){
     event.preventDefault();
 
-    axios.post(`http://localhost:3000/api/v1/support_tickets/${ticketId}/responses`, {
+    axios.post(`https://future-health-api-39e0c55da4b5.herokuapp.com/api/v1/support_tickets/${ticketId}/responses`, {
       description: response
     }).then((response) => console.log(`Would normally send email here with body: ${response.data.description}`))
   }
