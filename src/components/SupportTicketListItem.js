@@ -16,6 +16,8 @@ function SupportTicketListItem(props) {
     axios.post(`https://future-health-api-39e0c55da4b5.herokuapp.com/api/v1/support_tickets/${ticketId}/responses`, {
       description: response
     }).then((response) => console.log(`Would normally send email here with body: ${response.data.description}`))
+
+    setResponse("")
   }
 
   return (
