@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Help Desk
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app allows user to submit a support ticket regarding the issue they are experiencing. There are two pages on the app, `Help Desk` and `Support Tickets`. On the `Help Desk` page, users can submit a ticket with their name, email, and a description of the concern. On the `Support Tickets` page, support staff can see a list of support tickets with options to view details of each, update ticket status, and respond to each ticket. There are 3 ticket statuses: "new", "in progress", and "resolved". The app will not send email, instead it will simply display the ticket detail and response onto the developer console.
 
-## Available Scripts
+The frontend of the app is written in React.js and deployed to Heroku for live demo.
+Backend of the app is build using Ruby on Rails with a repository hosted at https://github.com/xchen136/future_health_api.
 
-In the project directory, you can run:
+**Live Demo:** https://future-health-frontend-81267e8cf9e0.herokuapp.com
+
+<img width="722" alt="image" src="https://github.com/xchen136/future_health_frontend/assets/31082478/213f068f-ebea-4910-9bbc-5a335d68e18e">
+
+<img width="2114" alt="image" src="https://github.com/xchen136/future_health_frontend/assets/31082478/f399609a-4e3f-4e09-ad7f-f38701ceb549">
+
+
+## Installations
+**My Operating System:** MacOS in Ventura 13.1 (22C65)
+
+Make sure these are installed:
+1. react: `18.2.0` ([installation](https://react.dev/learn/installation))
+2. node.js `v16.15.1` ([installation](https://nodejs.org/en))
+3. npm `8.11.0` ([installation](https://docs.npmjs.com/about-npm))
+
+## Running Locally
+
+Make sure axio requests are pointed to localhost (ex: http://localhost:3000).
+
+### `npm install`
+Install all the necessary packages.
 
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:3000](http://localhost:3000) or other port it's running on to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
