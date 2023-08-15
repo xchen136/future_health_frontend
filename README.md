@@ -10,16 +10,21 @@ Frontend is written in React.js, while Backend ([repository](https://github.com/
 
 <img width="1202" alt="image" src="https://github.com/xchen136/future_health_frontend/assets/31082478/f743b613-06e2-4293-9692-ae2266ce760b">
 
-
 <br>
 
-## Installations
+## Tech Stack
 **My Operating System:** MacOS in Ventura 13.1 (22C65)
 
 Make sure these are installed:
 1. react: `18.2.0` ([installation](https://react.dev/learn/installation))
 2. node.js `v16.15.1` ([installation](https://nodejs.org/en))
 3. npm `8.11.0` ([installation](https://docs.npmjs.com/about-npm))
+
+<br>
+
+**Styling**
+1. TailwindCSS: `3.3.3` ([source](https://tailwindcss.com/))
+2. Material UI: `5.14.4` ([source](https://mui.com/))
 
 <br>
 
