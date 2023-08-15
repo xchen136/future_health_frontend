@@ -56,7 +56,7 @@ function SupportTicketList() {
           <TableHead>
             <TableRow>
               <TableCell />
-              <TableCell>Ticket #</TableCell>
+              <TableCell>Ticket#</TableCell>
               <TableCell>Description</TableCell>
               <TableCell>Name</TableCell>
               <TableCell>Email</TableCell>
