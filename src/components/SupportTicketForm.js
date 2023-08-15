@@ -18,7 +18,7 @@ function SupportTicketForm() {
         email: email,
         description: description
       }
-    }).then((response) => console.log(response.data))
+    }).then((response) => console.log(`Would normally send email here with body: ${response.data.description}`))
 
     setFullName("")
     setEmail("")

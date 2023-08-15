@@ -15,7 +15,7 @@ function SupportTicketListItem(props) {
 
     axios.post(`http://localhost:3000/api/v1/support_tickets/${ticketId}/responses`, {
       description: response
-    }).then((response) => console.log(response.data))
+    }).then((response) => console.log(`Would normally send email here with body: ${response.data.description}`))
   }
 
   return (
