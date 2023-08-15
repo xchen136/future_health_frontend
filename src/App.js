@@ -14,7 +14,7 @@ function App() {
         <div className="flex justify-center">
           <Routes>
             <Route path="/" element={<SupportTicketForm/>}></Route>
-            <Route path="/admin" element={<SupportTicketList/>}></Route>
+            <Route path="/support_tickets" element={<SupportTicketList/>}></Route>
           </Routes>
         </div>
       </Router>
